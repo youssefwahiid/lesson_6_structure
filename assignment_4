@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+struct Sstudents {
+    char name[20];
+    int roll;
+    int marks;
+} s1, s2; // Create instances of the structure to store student data: s1 and s2
+
+int main() {
+    // Initialize the roll numbers
+    s1.roll = 1;
+    s2.roll = 2;
+
+    printf("Enter information of students\n\n");
+
+    printf("For roll number %d\n", s1.roll);
+    printf("Enter name: ");
+    fflush(stdout);
+    gets(s1.name);
+    printf("Enter marks: ");
+    fflush(stdout);
+    scanf("%d", &s1.marks);
+
+    // Consume the newline character left in the input buffer
+    getchar();
+
+    printf("\nFor roll number %d\n", s2.roll);
+    printf("Enter name: ");
+    fflush(stdout);
+    gets(s2.name);
+    printf("Enter marks: ");
+    fflush(stdout);
+    scanf("%d", &s2.marks);
+
+    printf("\n.\n.\n");
+    printf("Displaying information of students:\n");
+
+    if (s1.marks >= s2.marks) {
+        printf("Information for roll number %d\n", s1.roll);
+        printf("Name: %s\n", s1.name);
+        printf("Marks: %d\n", s1.marks);
+    } else {
+        printf("Information for roll number %d\n", s2.roll);
+        printf("Name: %s\n", s2.name);
+        printf("Marks: %d\n", s2.marks);
+    }
+
+    return 0;
+}
