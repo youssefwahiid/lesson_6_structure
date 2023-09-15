@@ -1,0 +1,31 @@
+﻿
+
+#include <stdio.h>
+
+struct Scomplex{
+float real;
+float imaginary;
+} n1,n2, sum ;
+
+void add (struct Scomplex sum) {
+
+sum.real n1.real+ n2.real;
+sum.imaginary = nl.imaginary + n2.imaginary;
+printf("sum= %.2f+%.2fi", sum.real, sum. imaginary);
+}
+
+int main() {
+printf("for 1st complex number: \n"); printf("Enter real and imaginary numbers: "); 
+fflush(stdout);
+scanf("%f",&nl.real);
+fflush(stdout);
+scanf("%f", &n1.imaginary);
+printf("for 2st complex number: \n");
+printf("Enter real and imaginary numbers: ");
+fflush(stdout);
+scanf("%f",&n2.real);
+fflush(stdout);
+scanf("%f", &n2.imaginary);
+add (sum);
+return 0;
+}
