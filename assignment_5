@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// to pass arguments to macros use #define
+#define Area (3.14 * (r) * (r))
+
+int main() {
+
+    double r;
+
+    printf("Enter the radius: ");
+    fflush(stdout);
+    scanf("%lf", &r);
+
+    // Calculate  area of the circle using the macro
+    double area = Area;
+
+    printf("The area of the circle: %.2lf\n", area);
+
+    return 0;
+}
